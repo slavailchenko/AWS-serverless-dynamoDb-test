@@ -1,0 +1,40 @@
+{
+  "name": "test-aws-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:local" : "docker-compose up && serverless offline start --stage dev",
+    "start:deploy" : "sls deploy --stage dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-assert": "^1.4.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.604.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "serverless-offline": "^5.12.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "babel-eslint"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "ecmaVersion": 2017
+    }
+  }
+}
